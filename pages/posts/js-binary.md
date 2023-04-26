@@ -10,6 +10,7 @@ author: eddie
 
 ![](/images/post/js-binary/index.png)
 
+![](/images/post/js-binary/list.png)
 
 ## 进制数的表示
 
@@ -277,7 +278,7 @@ Number('0o11') // 9
 
 ## 二进制缓冲区
 
-  
+![](/images/post/js-binary/arraybuffer.png)
 
 
 ### ArrayBuffer
