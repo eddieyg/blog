@@ -363,7 +363,7 @@ dv.setInt8(0, 100)
 dv.setInt16(1, 200)
 
 console.log(
-    dv.getInt8(0),  // 100w
+    dv.getInt8(0),  // 100
     dv.getInt16(0), // ?（Int16 取 Int8）
     dv.getInt8(1),  // 0
     dv.getInt16(1), // 200
@@ -409,7 +409,7 @@ console.log(
 
 > 是一种用于传输二进制数据的编码方式，可以将任意二进制数据编码成可打印字符，便于传输和处理。
 
-base64 要求将每三个 8bits 字节转换为四个 6bit 的字节，再根据这 4 个 8bit 字节的十进制在索引表中查找对应的值。
+base64 要求将每三个 8bits 字节转换为四个 6bit 的字节，再根据这 4 个字节的十进制在索引表中查找对应的值。
 
 ![](/images/post/js-binary/base64.png)
 
