@@ -272,6 +272,31 @@ Number('0o11') // 9
 
   
 
+#### 位掩码
+
+> 位掩码（BitMask），是”位（Bit）“和”掩码（Mask）“的组合词。”位“指代着二进制数据当中的二进制位，而”掩码“指的是一串用于与目标数据进行按位操作的二进制数字。
+
+位掩码就是位运算的一个应用场景。  
+举一个例子：一个4位二进制的权限值，依次对应 `新增`、`删除`、`修改`、`查询` 。
+
+```
+let createFlag = 0b1000
+let deleteFlag = 0b0100
+let modifyFlag = 0b0010
+let queryFlag = 0b00001
+let permission = 0b0000 // 权限初始值
+
+// 更改 '删除' 的权限
+permission = permission ^ deleteFlag  // 0b0100
+
+// 更改 '查询' 的权限
+permission = permission ^ queryFlag  // 0b0101
+
+// 读取 
+const allowDelete = Boolean(permission & deleteFlag) // true
+const allowQuery = Boolean(permission & queryFlag) // true
+const allowModify = Boolean(permission & modifyFlag) // false
+```
 
   
 
